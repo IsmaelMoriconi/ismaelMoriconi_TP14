@@ -1,33 +1,36 @@
-productos = ["Refrigerador", "Microondas", "Lavadora", "Aspiradora", "Plancha", "Cafetera"]
+const productos = ["Refrigerador", "Microondas", "Lavadora", "Aspiradora", "Plancha", "Cafetera"];
 
-print("Primer producto:", productos[0])  
-print("Tercer producto:", productos[2])  
-print("Último producto:", productos[-1]) 
+console.log("Primer producto:", productos[0]);
+console.log("Tercer producto:", productos[2]);
 
-producto_extraido = productos.pop(0)
-productos.append(producto_extraido)
-print("Array después de mover el primer producto al final:", productos)
+console.log("Último producto:", productos[productos.length - 1]);
 
-productos.append("Secador de pelo")
-productos.append("Batidora")
-print("Array después de agregar nuevos productos:", productos)
+let producto_extraido = productos.shift();  
+productos.push(producto_extraido);  
+console.log("Array después de mover el primer producto al final:", productos);
 
-cantidad_elementos = len(productos)
-print("Cantidad de productos en el array:", cantidad_elementos)
+productos.push("Secador de pelo");
+productos.push("Batidora");
+console.log("Array después de agregar nuevos productos:", productos);
 
-producto_buscar = "Microondas"
-    print("Producto encontrado:", producto_buscar)
+let cantidad_elementos = productos.length;
+console.log("Cantidad de productos en el array:", cantidad_elementos);
 
-    print("El producto buscado no existe:", producto_buscar)
+let producto_buscar = "Microondas";
+if (productos.includes(producto_buscar)) {
+  console.log("Producto encontrado:", producto_buscar);
+} else {
+  console.log("El producto buscado no existe:", producto_buscar);
+}
 
-cadena_productos = " ".join(productos)
-print("Cadena de productos:", cadena_productos)
+let cadena_productos = productos.join(" ");
+console.log("Cadena de productos:", cadena_productos);
 
-cantidad_caracteres = len(cadena_productos)
-print("Cantidad de caracteres en la cadena de texto:", cantidad_caracteres)
+let cantidad_caracteres = cadena_productos.length;
+console.log("Cantidad de caracteres en la cadena de texto:", cantidad_caracteres);
 
-cadena_productos_modificada = cadena_productos.replace("Microondas", "Horno eléctrico")
-print("Cadena modificada:", cadena_productos_modificada)
+let cadena_productos_modificada = cadena_productos.replace("Microondas", "Horno eléctrico");
+console.log("Cadena modificada:", cadena_productos_modificada);
 
-nuevo_array = cadena_productos_modificada.split(" ")
-print("Nuevo array generado:", nuevo_array)
+let nuevo_array = cadena_productos_modificada.split(" ");
+console.log("Nuevo array generado:", nuevo_array);
